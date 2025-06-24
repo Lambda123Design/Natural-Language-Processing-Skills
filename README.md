@@ -7,3 +7,4 @@
 
 
 **NLP Libraries: NLTK, spaCy**
+**NLTK** - ntlk.sent_tokenize, nltk.word_tokenize
