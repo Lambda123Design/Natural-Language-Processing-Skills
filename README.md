@@ -3,3 +3,7 @@
 **Natural Language Processing using Machine Leaning:**
 
 1. **Tokenization** - Corpus, Document, Vocabulary, Words
+
+
+
+**NLP Libraries: NLTK, spaCy**
