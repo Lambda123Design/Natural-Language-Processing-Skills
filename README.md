@@ -21,9 +21,9 @@
 
 **(i)** **NLTK** - ntlk.sent_tokenize, nltk.word_tokenize
 
-**(ii) Tokenization using NLTK: ** from nltk.tokenize import wordpunct_tokenize (Splits for Punctuations too), from nltk.tokenize import TreebankWordTokenizer (Full Stop won't be considered as a word in in-between places)
+**Tokenization using NLTK: ** from nltk.tokenize import wordpunct_tokenize (Splits for Punctuations too), from nltk.tokenize import TreebankWordTokenizer (Full Stop won't be considered as a word in in-between places)
 
-**(iii) Stemming: ** from nltk.stem import PorterStemmer
+**2. Stemming: ** from nltk.stem import PorterStemmer
 
 **Issue:** (With PorterStummer) Some words loose it's form E.g. history---->histori; congratulations --> congratuli
 
@@ -37,9 +37,15 @@ snowballsstemmer.stem("fairly"),snowballsstemmer.stem("sportingly") --> ('fair',
 
 **Snowball Stemmer better than Porter Stemmer**
 
-**(iv) Lemmatization: ** Stemming - Word Stems; Lemmatization --> Lemma (Root Words rather than Word Stems) (Done using WordNetCorpusReader); lemmatizer.lemmatize("going",pos='v') [Better for Verbs]
+**3. Lemmatization: ** Stemming - Word Stems; Lemmatization --> Lemma (Root Words rather than Word Stems) (Done using WordNetCorpusReader); lemmatizer.lemmatize("going",pos='v') [Better for Verbs]
 
 **NLTK provides WordNetLemmatizer class which is a thin wrapper around the wordnet corpus. This takes more time because it gets word from the Corpus**
+
+**4. StopWords**: Few Words like "I, the, of" don't play much in Model Buidling for Sentimental Analysis/Spam Classification; We will use Tokenization to take sentence tokens(Para to Sentence Tokenization), We will see stopwords, filter and then use Stemming/lemmatization only for those important words
+
+from nltk.corpus import stopwords;
+
+stopwords.words('english') --> Shows all Stopwords in English Language
 
 
 
