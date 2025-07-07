@@ -2,15 +2,15 @@
 
 **Natural Language Processing using Machine Leaning:**
 
-**My Skills in NLP:
+**My Skills in NLP:**
 
-1. Tokenization
+**1. Tokenization**
 
-2. Stemming
+**2. Stemming**
 
-3. Lemmatization
+**3. Lemmatization**
 
-4. Stop Words**
+**4. Stop Words**
 
 1. **Tokenization** - Corpus, Document, Vocabulary, Words
 
