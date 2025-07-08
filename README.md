@@ -22,6 +22,10 @@
 
 **8. Bag of Words**
 
+**9. N Grams**
+
+**10.TF-IDF**
+
 **NLP Projects Workflow:**
 
 (i) Dataset Loading
@@ -86,4 +90,34 @@ cv=CountVectorizer(max_features=100) --> Takes top 100 features with Maximum Fre
 
 For Binary BOW --> cv=CountVectorizer(max_features=100,binary=True)
 
+**9. N Grams:** [Combined with Bag of Words] Bigrams (2 Words Combination); Trigrams (3 Words Combination)
+
+**sklearn has n grams feature** --> (1,1) - Unigram; (1,2) - Unigram, Bigram; (1,3) - Unigram, Bigram, Trigram; (2,3) - Bigram, Trigram
+
+cv=CountVectorizer(max_features=100,binary=True,ngram_range=(2,3))
+
+**Start with (1,1); Try with (1,2), (1,3); Then try with Hyperparameter like Max_features; Then finally go for Bigram and Trigram**
+
+**10. TF-IDF (Term Frequency - Inverse Document Frequency)**
+
+Term Frequency (TF) = Number of Repetition of Words in Sentence / Number of words in sentence
+
+Inverse Document Frequency (IDF) = log (No. of sentences/No. of sentences containing the word)
+
+We calculate TF, IDF separately and multiply both, for each sentences and finally it comes as a Vector.
+
+** Imported from - sklearn (from sklearn.feature_extraction.text import TfidfVectorizer)**
+
+Also works with n-Grams
+
+**Gives Word Importance - BOW calculates only 0's and 1's; TF-IDF, we calculate TF and multiply with IDF, so we get a vector like, where word importance is calculated**
+
+
+**Notes: Word Embeddings - Convert Words to vectors, that maintains meaning and similar words are placed together (Done through PCA Example)**
+
+**Word Embeddings Types:**
+
+**(i) Count or Frequency - One-Hot Encoding, Bag of Words, TF-IDF**
+
+**(ii) Deep Learning Trained Model - Word2Vec (Two Types: Continuous Bag of Words (CBOW) and Skipgram**
 
