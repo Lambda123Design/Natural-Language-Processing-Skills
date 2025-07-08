@@ -127,5 +127,5 @@ Also works with n-Grams
 
 **Google Trained a Deep Learning Model on 3Bn Words**
 
-**Recommendations happen on based of it [Distance = 1- Cosine Similarity (1- cos(theta) between the Vectors) **
+**Recommendations happen on based of it [Distance = 1- Cosine Similarity (1- cos(theta) between the Vectors)**
 
