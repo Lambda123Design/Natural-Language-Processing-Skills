@@ -82,4 +82,6 @@ Two Types: (i) Binary BOW --> If frequency is 2, it reduces to 1 ([2 1 0] --> [1
 
 **Imported Using "from sklearn.feature_extraction.text import CountVectorizer"**
 
+cv=CountVectorizer(max_features=100) --> Takes top 100 features with Maximum Frequency
+
 
