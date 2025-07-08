@@ -2,6 +2,8 @@
 
 **Natural Language Processing using Machine Leaning:**
 
+**NLP Libraries: NLTK, spaCy**
+
 **My Skills in NLP:**
 
 **1. Tokenization**
@@ -12,12 +14,24 @@
 
 **4. Stop Words**
 
+**5. Parts of Speech Tagging**
+
+**6. Named Entity Recognition**
+
+**NLP Projects Workflow:**
+
+(i) Dataset Loading
+
+(ii) Text Pre-Processing - I --> Tokenization, Lowercase the words, Regular Expressions
+
+(iii) Text Pre-Processing - II --> Stemming, Lemmatization, Stop Words
+
+(iv) Words to Vectors --> One-Hot Encoding, Bag of Words, TF-IDF, Word2vec, Avg Word2Vec
+
+(v) ML Model Development
+
+
 1. **Tokenization** - Corpus, Document, Vocabulary, Words
-
-
-
-**NLP Libraries: NLTK, spaCy**
-
 
 **(i)** **NLTK** - ntlk.sent_tokenize, nltk.word_tokenize
 
@@ -47,6 +61,13 @@ from nltk.corpus import stopwords;
 
 stopwords.words('english') --> Shows all Stopwords in English Language
 
+**5. Parts of Speech Tagging:** lemmatizer.lemmatize("going",pos='v') [pos - Parts of Speech Tagging] We took a sentence, removed stopwords and saw the POS_TAG for each tokens
+
+print(nltk.pos_tag("Taj Mahal is a beautiful Monument".split()))
+
+**6. Named Entity Recognition:** Provides like a Image from POS_TAG
+
+words=nltk.word_tokenize(sentence); tag_elements=nltk.pos_tag(words); nltk.ne_chunk(tag_elements).draw()
 
 
 
