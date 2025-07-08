@@ -121,3 +121,11 @@ Also works with n-Grams
 
 **(ii) Deep Learning Trained Model - Word2Vec (Two Types: Continuous Bag of Words (CBOW) and Skipgram**
 
+**Word to Vec:** Words are converted to Feature Representation; 
+
+**Each Vocabulary (Unique Word) will be represented as n-dimension feature representation as a Vecor**
+
+**Google Trained a Deep Learning Model on 3Bn Words**
+
+**Recommendations happen on based of it [Distance = 1- Cosine Similarity (1- cos(theta) between the Vectors) **
+
