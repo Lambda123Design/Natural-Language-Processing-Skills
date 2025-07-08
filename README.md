@@ -18,6 +18,10 @@
 
 **6. Named Entity Recognition**
 
+**7. One-Hot Encoding**
+
+**8. Bag of Words**
+
 **NLP Projects Workflow:**
 
 (i) Dataset Loading
@@ -69,5 +73,11 @@ print(nltk.pos_tag("Taj Mahal is a beautiful Monument".split()))
 
 words=nltk.word_tokenize(sentence); tag_elements=nltk.pos_tag(words); nltk.ne_chunk(tag_elements).draw()
 
+**7. One-Hot Encoding: ** Converts each and every vocabulary into vectors
+
+**8. Bag of Words:** Lower all the words (To avoid Repetition) --> Apply Stopwords (He, She will be deleted); Select Vocabulary and Frequency (OHE was for each word; BOW gets vectors for each sentences level. 
+
+Two Types: (i) Binary BOW --> If frequency is 2, it reduces to 1 ([2 1 0] --> [1 1 0]) It can have only 0 or 1
+          (ii) BOW --> Can have frequencies
 
 
