@@ -80,4 +80,6 @@ words=nltk.word_tokenize(sentence); tag_elements=nltk.pos_tag(words); nltk.ne_ch
 Two Types: (i) Binary BOW --> If frequency is 2, it reduces to 1 ([2 1 0] --> [1 1 0]) It can have only 0 or 1
           (ii) BOW --> Can have frequencies
 
+**Imported Using "from sklearn.feature_extraction.text import CountVectorizer"**
+
 
