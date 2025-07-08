@@ -84,4 +84,6 @@ Two Types: (i) Binary BOW --> If frequency is 2, it reduces to 1 ([2 1 0] --> [1
 
 cv=CountVectorizer(max_features=100) --> Takes top 100 features with Maximum Frequency
 
+For Binary BOW --> cv=CountVectorizer(max_features=100,binary=True)
+
 
