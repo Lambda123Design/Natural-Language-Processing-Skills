@@ -26,6 +26,8 @@
 
 **10.TF-IDF**
 
+**11.CBOW - Word2Vec**
+
 **NLP Projects Workflow:**
 
 (i) Dataset Loading
@@ -129,3 +131,12 @@ Also works with n-Grams
 
 **Recommendations happen on based of it [Distance = 1- Cosine Similarity (1- cos(theta) between the Vectors)**
 
+**11. CBOW - Word2Vec** - We have Window Size; Take Window Size as Odd; In general, we take the Middle word and train it with both before and after words, so that is is aware of words
+
+We then do One-Hot Encoding for all words; Take the Inputs as Input Layer
+
+Window Size in the Hidden Layer
+
+We know the Output Word and Train according to it
+
+**If Window size is 5, I will get Vector of 5 Dimnensions in Output Layer**
