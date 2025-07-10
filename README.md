@@ -28,6 +28,8 @@
 
 **11.CBOW - Word2Vec**
 
+**12. Skipgram - Word2Vec**
+
 **NLP Projects Workflow:**
 
 (i) Dataset Loading
@@ -131,12 +133,26 @@ Also works with n-Grams
 
 **Recommendations happen on based of it [Distance = 1- Cosine Similarity (1- cos(theta) between the Vectors)**
 
-**11. CBOW - Word2Vec** - We have Window Size; Take Window Size as Odd; In general, we take the Middle word and train it with both before and after words, so that is is aware of words
+**11. CBOW - Word2Vec** - We have Window Size; Take Window Size as Odd; In general, we take the Middle word and train it with both before and after words, so that is is aware of words. **It is kind of ANN Deep Learning Architecture**
 
 We then do One-Hot Encoding for all words; Take the Inputs as Input Layer
 
 Window Size in the Hidden Layer
 
-We know the Output Word and Train according to it
+We know the Output Word and Train according to it. Each and every dimension in a vector is connected with every dimension in Hidden and Output Layer
 
 **If Window size is 5, I will get Vector of 5 Dimnensions in Output Layer**
+
+**Window Size --> Feature Representation**
+
+**Google Model said to have 300 Features means, 300 Window Size. More the Window Size, better the Model**
+
+**12. Skipgram - Word2Vec** - In Skipgram also it will be similar to CBOW, but the thing is we change the Input and Output Vice-Versa.
+
+**Input Layer Size - No. of Words in Vocabulary**
+
+**Hidden Layer Size - Window Size (Feature Representation)**
+
+**Output Layer uses a Softmax (As in ANN Architecture)**
+
+**Output Layer - (Number of Neurons will be Number of words in the dataset (E.g. iNeuron Company Related to - Means 4 Neurons); Output will be 7 Vectors**
