@@ -2,7 +2,7 @@
 
 **Natural Language Processing using Machine Leaning:**
 
-**NLP Libraries: NLTK, spaCy**
+**NLP Libraries: NLTK, spaCy, Gensim**
 
 **My Skills in NLP:**
 
@@ -29,6 +29,8 @@
 **11.CBOW - Word2Vec**
 
 **12. Skipgram - Word2Vec**
+
+**13. Avg Word2Vec**
 
 **NLP Projects Workflow:**
 
@@ -156,3 +158,29 @@ We know the Output Word and Train according to it. Each and every dimension in a
 **Output Layer uses a Softmax (As in ANN Architecture)**
 
 **Output Layer - (Number of Neurons will be Number of words in the dataset (E.g. iNeuron Company Related to - Means 4 Neurons); Output will be 7 Vectors**
+
+**13. Avg Word2Vec:** In Word2Vec, we found of Vectors for each and every word. Say for example of Google's Pretrained model which has 300 Dimensions, It has vector of 300 Dimensions for each and every word. (Which won't be much helpful)
+
+So, In Avg, Word2Vec, we take all dimensions of Vectors and take it's avergae.
+
+**Finally, we get only one final vector at the sentence level of 300 Dimensions, which we can use and train the model**
+
+**Implementation using Gensim:**
+
+**Using Google's Pretrained Model:**
+
+**Similarity Score is calculated using Cosine Similarity**
+
+Model Name - 'word2vec-google-news-300'
+
+wv = api.load('word2vec-google-news-300')
+
+vec_king.shape --> 300 Dimensions
+
+wv.most_similar('cricket') --> We get Cricketing, Cricketers
+
+wv.most_similar('happy') --> We get Glad, Pleased
+
+wv.similarity("hockey","sports") --> We get Similarity Score
+
+vec=wv['king']-wv['man']+wv['woman']; After this once we check similar words for 'vec', we get Queen in it (Next to King, as King is present in the sentence itself)
