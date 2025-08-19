@@ -1,5 +1,7 @@
 # Natural-Language-Processing-Skills
 
+#### Using Multinomial Naive Bayes in NLP Problem, as it works well with Text Data
+
 **Natural Language Processing using Machine Leaning:**
 
 **NLP Libraries: NLTK, spaCy, Gensim**
@@ -32,11 +34,18 @@
 
 **13. Avg Word2Vec**
 
+**14. Spam Ham Classification Project using BOW and TF-IDF**
+
 **NLP Projects Workflow:**
 
 (i) Dataset Loading
 
 (ii) Text Pre-Processing - I --> Tokenization, Lowercase the words, Regular Expressions
+
+## Create the Bag OF Words model
+from sklearn.feature_extraction.text import CountVectorizer
+## for Binary BOW enable binary=True
+cv=CountVectorizer(max_features=2500,ngram_range=(1,2))
 
 (iii) Text Pre-Processing - II --> Stemming, Lemmatization, Stop Words
 
@@ -184,3 +193,43 @@ wv.most_similar('happy') --> We get Glad, Pleased
 wv.similarity("hockey","sports") --> We get Similarity Score
 
 vec=wv['king']-wv['man']+wv['woman']; After this once we check similar words for 'vec', we get Queen in it (Next to King, as King is present in the sentence itself)
+
+**14. Spam Ham Classification Project using BOW and TF-IDF**
+
+#### Using Multinomial Naive Bayes in NLP Problem, as it works well with Text Data
+
+## Create the Bag OF Words model
+
+from sklearn.feature_extraction.text import CountVectorizer
+
+## for Binary BOW enable binary=True
+
+cv=CountVectorizer(max_features=2500,ngram_range=(1,2))
+
+from sklearn.naive_bayes import MultinomialNB
+
+spam_detect_model=MultinomialNB().fit(X_train,y_train)
+
+y_pred=spam_detect_model.predict(X_test)
+
+**TF-IDF Model:**
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+tv=TfidfVectorizer(max_features=2500,ngram_range=(1,2))
+
+X_train=tv.fit_transform(X_train).toarray()
+
+X_test=tv.transform(X_test).toarray()
+
+tv.vocabulary_
+
+from sklearn.naive_bayes import MultinomialNB
+
+spam_tfidf_model = MultinomialNB().fit(X_train, y_train)
+
+**Prediction:** y_pred=spam_tfidf_model.predict(X_test)
+
+score=accuracy_score(y_test,y_pred); print(score)
+
+
